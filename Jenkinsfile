@@ -13,16 +13,16 @@ pipeline {
     stages {
         stage("stage1") {
             steps {
-            	script {
-            		loadScripts()
-                	common.mycommoncode()
-            	}
+                script {
+                    loadScripts()
+                    common.mycommoncode()
+                }
             }
         }
         stage("stage2") {
             steps {
-            	script {
-            		common.mycommoncode2()
+                script {
+                    common.mycommoncode2()
                 }
             }
         }
@@ -32,11 +32,8 @@ pipeline {
             }
         }
     }
-
 }
 
-def common = ''
 def loadScripts() {
-
     common = load "common.groovy"
 }

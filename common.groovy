@@ -14,3 +14,5 @@ def mycommoncode2() {
         """
     }
 }
+
+return this
