@@ -25,7 +25,7 @@ pipeline {
             }
         }
     }
-def common = load "common.groovy"
-common.mycommoncode()
 
 }
+def common = load "common.groovy"
+common.mycommoncode()
