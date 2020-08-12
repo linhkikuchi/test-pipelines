@@ -1,5 +1,7 @@
 pipeline {
-    agent none
+    agent {
+        label "master"
+    }
     options {
         ansiColor("xterm")
         timeout(time: 5, unit: "MINUTES")
