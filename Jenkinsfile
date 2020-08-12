@@ -11,14 +11,18 @@ pipeline {
     stages {
         stage("stage1") {
             steps {
-            	common = load "common.groovy"
-                common.mycommoncode()
+            	script {
+            		common = load "common.groovy"
+                	common.mycommoncode()
+            	}
             }
         }
         stage("stage2") {
             steps {
-            	common = load "common.groovy"
-                common.mycommoncode2()
+            	script {
+            		common = load "common.groovy"
+                	common.mycommoncode2()
+                }
             }
         }
         stage("stage3") {
