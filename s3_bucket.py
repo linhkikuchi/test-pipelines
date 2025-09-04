@@ -8,11 +8,6 @@ def delete_s3_bucket(bucket_name, region='us-east-1'):
     """Delete an S3 bucket and all its contents"""
     try:
         s3_client = boto3.client('s3', region_name=region)
-        response = s3_client.list_objects_v2(Bucket=bucket_name)
-        if 'Contents' in response:
-            for obj in response['Contents']:
-                s3_client.delete_object(Bucket=bucket_name, Key=obj['Key'])
-        
         s3_client.delete_bucket(Bucket=bucket_name)
         
         print(f"Successfully deleted bucket: {bucket_name}")
